@@ -313,7 +313,37 @@
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Memebership ID Card</h5>
                                                                 <div class="">
-                                                                    <img src=".\assets\images\card.png">
+                                                                    <img src=".\assets\images\card.png" width="50%">
+                                                                </div>
+                                                                <!--end table-responsive-->
+                                                            </div>
+                                                        </div>
+                                                        <!-- end card -->
+                                                    </div>
+                                                    <!-- end col -->
+                                                </div>
+                                                <!-- end row -->
+                                                <div class="row">
+                                                    <div class="col-xl-16">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">ID Card Request</h5>
+                                                                <div class="col">
+                                                                    <p>Send electronic copy to Customer</p>
+                                                                    <button onclick="cSubmit()">Submit</button>
+                                                                    <p class="mtb-2">Send electronic copy to selected provider</p>
+                                                                    <div class="btn-group me-1 mb-2">
+                                                                        <button type="button" class="btn btn-light dropdown-toggle"
+                                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                            aria-expanded="false">Provider Selection <i
+                                                                                class="mdi mdi-chevron-down"></i></button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#">Complete Smile Destistry</a>
+                                                                            <a class="dropdown-item" href="#">Front Street Family Dentistry</a>
+                                                                            <a class="dropdown-item" href="#">Wagner Dental Group</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <button onclick="pSubmit()">Submit</button>
                                                                 </div>
                                                                 <!--end table-responsive-->
                                                             </div>
@@ -427,10 +457,16 @@
         <script>
             let zcode = () => {
                 $('#zcodemap').attr('src','https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14047.346268853793!2d-81.52914641214485!3d28.3335472242273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdentist!5e0!3m2!1sen!2sus!4v1675275963357!5m2!1sen!2sus')
-            }
+            };
             let zdirections = () => {
                 $('#zcodemap').attr('src','https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d14047.590310900274!2d-81.53687551812095!3d28.331701120597348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x88dd7f6622625a27%3A0x593776c5b7fe96a6!2s6000%20W%20Osceola%20Pkwy%2C%20Kissimmee%2C%20FL%2034746!3m2!1d28.3428176!2d-81.5256994!4m5!1s0x88dd7f4a9af0b6c1%3A0x9ccf7fcf38407b51!2s609%20Front%20St%2C%20Kissimmee%2C%20FL%2034747!3m2!1d28.3192366!2d-81.53691909999999!5e0!3m2!1sen!2sus!4v1675178856786!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade')
-            }
+            };
+            let pSubmit = () => {
+                alert('ID Card submitted to Front Street Family Dentistry')
+            };
+            let cSubmit = () => {
+                alert('ID Card Submitted to customer email')
+            };
         </script>
         <script>
             $( document ).ready(function() {
